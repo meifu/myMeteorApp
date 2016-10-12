@@ -9,7 +9,6 @@ export default class Section extends Component {
 			strokeDashoffset: function(el) {
 				console.log('test: ' + el.getTotalLength());
 				return [el.getTotalLength(), 0];
-				// return 100;
 			},
 			strokeDasharray: function(el) {
 				return el.getTotalLength();
@@ -25,8 +24,10 @@ export default class Section extends Component {
 			<section>
 				<div className="sectionInner">
 					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600">
-						// <path d="M600,0V600H0V0H-600V-600H0V0H600Z" strokeWidth="10" strokeDasharray="20" strokeDashoffset="0" strokeMiterlimit="10" strokeLinejoin="round" stroke="red" className="centerPath" fill="none" />
-						<path d="M600,0V600H0V0H-600V-600H0V0H600Z" strokeWidth="5" className="centerPath" fill="none" />
+						<symbol id="sym01">
+							<path d="M600,0V600H0V0H-600V-600H0V0H600Z" stroke="red" strokeWidth="5" strokeDasharray="0" className="centerPath" fill="none" />
+						</symbol>
+						<use xlink:href="#sym01" x="0" y="0" width="100%"/>	
 					</svg>
 					<p className="wow fadeInUp" data-wow-offset="200">{this.props.sectTxt.text}</p>
 				</div>
