@@ -459,9 +459,24 @@ section {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	p {
-		margin: 0 30px;
-	}
 }
 .sectionInner {
+	height: 50%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 15px;
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	
+	p {
+		display: inline-block;
+		text-align: left;
+	}
 }

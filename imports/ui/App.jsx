@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import Wow from 'wowjs';
 
-import Task from './Task.jsx';
+import Section from './Section.jsx';
 
 export default class App extends Component {
 	componentDidMount() {
-		console.log('component did mount');
 		new WOW({
 			callback: function(box) {
 				console.log('wow: ' + box);
@@ -23,8 +22,8 @@ export default class App extends Component {
 	}
 
 	renderText() {
-		return this.getText().map((task) => (
-			<Task key={task._id} task={task} />		
+		return this.getText().map((section) => (
+			<Section key={section._id} sectTxt={section} />		
 		));
 	}
 
