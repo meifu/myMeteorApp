@@ -3,18 +3,33 @@ import Anime from 'animejs';
 
 export default class Section extends Component {
 	componentDidMount() {
+		var componentSelf = this;
 		$('.sectionInner').width($(window).height()/2);
+		new WOW({
+			callback: function(box) { 
+				var svgObj = box.parentNode.getElementsByClassName('centerPath');
+				console.log('wow: ' + box.parentNode.getElementsByClassName('centerPath').length);
+				// for (var i = 0; i < box.parentNode.childNodes.length; i++) {
+				// 	console.log('wow wow: ' + box.parentNode.childNodes[i].tagName);
+				// 	if (box.parentNode.childNodes[i].tagName === 'svg') {
+				// 		console.log('')
+				// 	}
+				// }
+				componentSelf.animatePath(svgObj);
+			},
+		}).init();
 		
+	}
+
+	animatePath (centerPath) {
+		console.log('animatePath');
 		Anime({
-			targets: 'path',
+			targets: centerPath,
 			strokeDashoffset: function(el) {
 				console.log('test: ' + el.getTotalLength());
 				return [el.getTotalLength(), 0];
 			},
-			strokeDasharray: function(el) {
-				return el.getTotalLength();
-			},
-			duration: 5000,
+			duration: 4500,
 			easing: 'linear',
 			elasticity: 0
 		})
@@ -24,8 +39,8 @@ export default class Section extends Component {
 		return (
 			<section>
 				<div className="sectionInner">
-					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600">
-						<path d="M600,0V600H0V0H-600V-600H0V0H600Z" stroke="red" strokeWidth="5" strokeDasharray="0" className="centerPath" fill="none" />
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 300 300">
+						<path d="M300,0v300h-300v-300h300" stroke="black" strokeWidth="20" strokeDasharray="1500" strokeDashoffset="1500" className="centerPath" fill="none" />
 					</svg>
 					<p className="wow fadeInUp" data-wow-offset="200">{this.props.sectTxt.text}</p>
 				</div>

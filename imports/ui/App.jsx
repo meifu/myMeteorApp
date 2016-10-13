@@ -5,11 +5,7 @@ import Section from './Section.jsx';
 
 export default class App extends Component {
 	componentDidMount() {
-		new WOW({
-			callback: function(box) {
-				console.log('wow: ' + box);
-			},
-		}).init();
+		
 	}
 
 	getText() {
