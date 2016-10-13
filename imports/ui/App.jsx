@@ -17,7 +17,7 @@ export default class App extends Component {
 			{_id: 1, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit commodo lacus. Morbi non lobortis dui.'},
 			{_id: 2, text: 'Sed id nibh nec tortor dapibus dapibus. Ut at nisl nec urna molestie dignissim. Duis sodales nulla leo, sit amet tempor ante aliquam quis. Nam maximus urna a fermentum laoreet. Suspendisse accumsan vitae enim eget maximus.'},
 			{_id: 3, text: 'In aliquam purus quis ex tempor, id pellentesque sem blandit. Ut porta ligula pharetra quam rhoncus fermentum eu non dolor. Integer non erat sed lorem dapibus facilisis.'},
-			{_id: 4, text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultrices massa ac efficitur fermentum. Fusce vel tempor nisi, et tempus dui.'},
+			{_id: 4, text: 'Clas aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultrices massa ac efficitur fermentum. Fusce vel tempor nisi, et tempus dui.'},
 		];
 	}
 
