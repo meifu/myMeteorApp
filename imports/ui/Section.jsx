@@ -4,7 +4,7 @@ import Anime from 'animejs';
 export default class Section extends Component {
 	componentDidMount() {
 		var componentSelf = this;
-		$('.sectionInner').width($(window).height()/2);
+		// $('.sectionInner').width($(window).height()/2);
 		new WOW({
 			callback: function(box) { 
 				var svgObj = box.parentNode.getElementsByClassName('centerPath');
