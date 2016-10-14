@@ -35,25 +35,25 @@ export default class App extends Component {
 		return [
 			{
 				_id: 1, 
-				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit commodo lacus. Morbi non lobortis dui.',
+				text: 'Hi, I am May Kuo, a front end developer in Taiwan.',
 				path_desktop: 'M300,0v300h-300v-300h300',
 				path_mobile: ''
 			},
 			{
 				_id: 2, 
-				text: 'Sed ids nibh nec tortor dapibus dapibus. Ut at nisl nec urna molestie dignissim. Duis sodales nulla leo, sit amet tempor ante aliquam quis. Nam maximus urna fermentum laoreet. Suspendisse accumsan vitae enim eget maximus.',
+				text: 'My daily works are mainly based on HTML, CSS, and Javascript.',
 				path_desktop: 'M10 290 L290 290 L150 10 Z',
 				path_mobile: ''	
 			},
 			{
 				_id: 3, 
-				text: 'In aliquam purus quis ex tempor, id pellentesque sem blandit. Ut porta ligula pharetra quam rhoncus fermentum eu non dolor. Integer non erat sed lorem dapibus facilisis.',
+				text: 'Experiences: responsive websites, form validation ... etc.',
 				path_desktop: 'M2,150a148,148 0 1,0 296,0a148,148 0 1,0 -296,0',
 				path_mobile: ''	
 			},
 			{
 				_id: 4, 
-				text: 'Clas aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis ultrices massa ac efficitur fermentum. Fusce vel tempor nisi, et tempus dui.',
+				text: 'I use Sublime Text, Sass, Gulp, Git ...',
 				path_desktop: 'M300,150 225,280 75,280 0,150 75,20 225,20z',
 				path_mobile: ''	
 			},
