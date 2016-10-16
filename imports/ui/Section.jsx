@@ -13,7 +13,7 @@ export default class Section extends Component {
 			<section>
 				<div className="sectionInner">
 					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 300 300">
-						<path d={this.props.sectTxt.path_desktop} stroke="black" strokeWidth="3" strokeDasharray="1500" strokeDashoffset="1500" strokeMiterlimit="10" strokeLinecap="square" className="centerPath" fill="none" />
+						<path d={this.props.sectTxt.path_desktop} stroke={this.props.sectTxt.stroke_color} strokeWidth="3" strokeDasharray="1500" strokeDashoffset="1500" strokeMiterlimit="10" strokeLinecap="square" className="centerPath" fill="none" />
 					</svg>
 					<p className="wow fadeInUp" data-wow-offset="200">{this.props.sectTxt.text}</p>
 				</div>

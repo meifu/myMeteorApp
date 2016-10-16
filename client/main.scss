@@ -433,9 +433,18 @@ th {
 
 
 
+
 /*=====================================================================*\
                                custom
 \*=====================================================================*/
+@mixin gradient-bg($deg, $startColor, $endColor) {
+  background: $startColor; /* Old browsers */
+  background: -moz-linear-gradient($deg, $startColor 0%, $endColor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient($deg, $startColor 0%,$endColor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($deg, $startColor 0%,$endColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$startColor, endColorstr=$endColor,GradientType=0 ); /* IE6-9 */
+}
+
 html, #render-target, .container, section {
 	height: 100vh;
 }
@@ -455,11 +464,43 @@ header {
 .mainContent {
 	height: 100vh;
 }
+$limpet_shell: #98ddde;
+$peach_echo: #f7786b;
+$rose_quartz: #F7CAC9;
+$serenity: #91A8D0;
+$snorkel_blue: #034f84;
+$lilac_gray: #9896a4;
+$green_flash: #79c753;
+$iced_coffee: #b18f6a;
 section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+  &:first-child {
+    @include gradient-bg(45deg, $limpet_shell, $serenity); 
+    p {
+      color: #fff;
+    }
+  }
+  &:nth-child(2) {
+    @include gradient-bg(45deg, $snorkel_blue, $lilac_gray);
+    p {
+      color: #fff;
+    }
+  }
+  &:nth-child(3) {
+    @include gradient-bg(45deg, $peach_echo, $serenity);
+    p {
+      color: #fff;
+    }
+  }
+  &:nth-child(4) {
+    @include gradient-bg(45deg, $iced_coffee, $rose_quartz);
+    p {
+      color: #fff;
+    }
+  }
 }
 .sectionInner {
 	width: 70%;
